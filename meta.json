@@ -1,0 +1,11 @@
+{
+  "name": "Robot Framework report",
+  "summary": "读 Robot 的 output.xml，统计通过/失败/跳过。",
+  "author": "hummerstudio",
+  "license": "MIT",
+  "tags": [
+    "official-port",
+    "robot"
+  ],
+  "homepage": "https://github.com/hummerstudio/jenkins-atom-robot-report"
+}

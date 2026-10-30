@@ -1,0 +1,66 @@
+{
+  "atomCode": "robot-report",
+  "name": "Robot Framework report",
+  "version": "1.0.0",
+  "description": "读 Robot 的 output.xml，统计通过/失败/跳过。",
+  "execution": {
+    "packagePath": "robot-report.jar",
+    "language": "java",
+    "target": "$atom_java_path -cp robot-report.jar com.jenkinschina.atom.sdk.AtomRunner"
+  },
+  "input": {
+    "pattern": {
+      "label": "output.xml glob",
+      "type": "vuex-input",
+      "default": "**/output.xml"
+    },
+    "label": {
+      "label": "报告名称",
+      "type": "vuex-input",
+      "default": "Robot Framework"
+    },
+    "outputDir": {
+      "label": "HTML 输出目录",
+      "type": "vuex-input",
+      "default": "out/robot"
+    },
+    "failOnFailure": {
+      "label": "有失败用例就让这一步失败",
+      "type": "checkbox",
+      "default": "false"
+    },
+    "skipMarkingUnstable": {
+      "label": "不把构建标为 UNSTABLE",
+      "type": "checkbox",
+      "default": "false"
+    }
+  },
+  "output": {
+    "total": {
+      "type": "string",
+      "description": "用例数"
+    },
+    "passed": {
+      "type": "string",
+      "description": "通过"
+    },
+    "failed": {
+      "type": "string",
+      "description": "失败"
+    },
+    "skipped": {
+      "type": "string",
+      "description": "跳过"
+    },
+    "report": {
+      "type": "report",
+      "description": "构建页内嵌报告"
+    }
+  },
+  "x-jenkins": {
+    "protocol": "jenkins-1",
+    "requires": {
+      "runner": ">=0.4.0"
+    }
+  }
+}
