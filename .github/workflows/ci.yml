@@ -27,5 +27,5 @@ jobs:
         run: ./tools/smoke.sh
       - uses: actions/upload-artifact@v4
         with:
-          name: robot-report-atom
-          path: dist/robot-report/
+          name: robot-atom
+          path: dist/robot/

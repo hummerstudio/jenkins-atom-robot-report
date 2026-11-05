@@ -1,4 +1,4 @@
-package com.jenkinschina.atom.robotreport;
+package com.jenkinschina.atom.robot;
 
 import com.jenkinschina.atom.sdk.AtomContext;
 import com.jenkinschina.atom.sdk.AtomResult;
@@ -22,7 +22,7 @@ import org.w3c.dom.NodeList;
  * <p>Robot writes a rich log.html of its own; what a Jenkins build needs is the summary line and a link, so the atom
  * reads the statistics block and archives the log directory.
  */
-public class RobotReportAtom implements AtomTask {
+public class RobotAtom implements AtomTask {
 
     @Override
     public AtomResult run(AtomContext context) throws Exception {

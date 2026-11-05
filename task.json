@@ -1,12 +1,12 @@
 {
-  "atomCode": "robot-report",
+  "atomCode": "robot",
   "name": "Robot Framework report",
   "version": "1.0.0",
   "description": "读 Robot 的 output.xml，统计通过/失败/跳过。",
   "execution": {
-    "packagePath": "robot-report.jar",
+    "packagePath": "robot.jar",
     "language": "java",
-    "target": "$atom_java_path -cp robot-report.jar com.jenkinschina.atom.sdk.AtomRunner"
+    "target": "$atom_java_path -cp robot.jar com.jenkinschina.atom.sdk.AtomRunner"
   },
   "input": {
     "pattern": {

@@ -35,9 +35,9 @@ mkdir -p "$classes/META-INF/services"
 cp src/main/resources/META-INF/services/* "$classes/META-INF/services/"
 ( cd "$sdk" && "$JAR" xf "$SDK_JAR" && rm -rf META-INF/MANIFEST.MF META-INF/services )
 
-rm -rf dist/robot-report
-mkdir -p dist/robot-report
-"$JAR" --create --file dist/robot-report/robot-report.jar -C "$classes" . -C "$sdk" .
-cp task.json dist/robot-report/
-[ -f meta.json ] && cp meta.json dist/robot-report/
-echo "built dist/robot-report: $(ls dist/robot-report | tr '\n' ' ')"
+rm -rf dist/robot
+mkdir -p dist/robot
+"$JAR" --create --file dist/robot/robot.jar -C "$classes" . -C "$sdk" .
+cp task.json dist/robot/
+[ -f meta.json ] && cp meta.json dist/robot/
+echo "built dist/robot: $(ls dist/robot | tr '\n' ' ')"
