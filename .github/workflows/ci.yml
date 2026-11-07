@@ -37,4 +37,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: robot-atom
-          path: atom/dist/robot/
+          path: atom/target/dist/robot/
